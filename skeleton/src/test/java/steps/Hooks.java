@@ -19,10 +19,10 @@ public class Hooks extends BaseSteps {
 	@Before
 	public static void setUp(Scenario scenario) throws ATUTestRecorderException {
 		System.out.println("--- Starting scenario " + scenario.getName() + " execution ---");
-		DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
-		Date date = new Date();
-		grava = new ATUTestRecorder("target\\Evidence\\Video\\", scenario.getId() + dateFormat.format(date),
-				false);
+		//DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+		//Date date = new Date();
+		//grava = new ATUTestRecorder("target\\Evidence\\Video\\", scenario.getId() + dateFormat.format(date),
+		//		false);
 
 	}
 	
@@ -30,7 +30,7 @@ public class Hooks extends BaseSteps {
 	@After
 	public static void tearDown(Scenario scenario) throws ATUTestRecorderException {
 		System.out.println("\n--- Scenario " + scenario.getName() + " executed ---");
-		grava.stop();
+		//grava.stop();
 		//driver.quit();
 	}
 	

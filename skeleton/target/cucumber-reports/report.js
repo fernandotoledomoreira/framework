@@ -18,15 +18,15 @@ formatter.feature({
 });
 formatter.scenarioOutline({
   "line": 6,
-  "name": "teste",
+  "name": "teste login",
   "description": "",
-  "id": "teste;teste",
+  "id": "teste;teste-login",
   "type": "scenario_outline",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
       "line": 5,
-      "name": "@Web"
+      "name": "@testeWeb"
     }
   ]
 });
@@ -37,54 +37,61 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "inserir \"\u003cpalavra\u003e\"",
+  "name": "inserir email com \"\u003cemail\u003e\"",
   "keyword": "Quando "
 });
 formatter.step({
   "line": 9,
-  "name": "palavra inserida com sucesso",
+  "name": "inserir senha com \"\u003csenha\u003e\"",
+  "keyword": "E "
+});
+formatter.step({
+  "line": 10,
+  "name": "sistema apresenta \"\u003cBem vindo, teste!\u003e\"",
   "keyword": "Entao "
 });
 formatter.examples({
-  "line": 11,
+  "line": 12,
   "name": "",
   "description": "",
-  "id": "teste;teste;",
+  "id": "teste;teste-login;",
   "rows": [
     {
       "cells": [
         "Link",
-        "palavra"
+        "email",
+        "senha"
       ],
-      "line": 12,
-      "id": "teste;teste;;1"
+      "line": 13,
+      "id": "teste;teste-login;;1"
     },
     {
       "cells": [
         "https://seubarriga.wcaquino.me/login",
-        "teste"
+        "automacao_teste@teste.com.br",
+        "1234"
       ],
-      "line": 13,
-      "id": "teste;teste;;2"
+      "line": 14,
+      "id": "teste;teste-login;;2"
     }
   ],
   "keyword": "Exemplos"
 });
 formatter.before({
-  "duration": 4921368009,
+  "duration": 9351988530,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
-  "name": "teste",
+  "line": 14,
+  "name": "teste login",
   "description": "",
-  "id": "teste;teste;;2",
+  "id": "teste;teste-login;;2",
   "type": "scenario",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
       "line": 5,
-      "name": "@Web"
+      "name": "@testeWeb"
     }
   ]
 });
@@ -98,7 +105,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "inserir \"teste\"",
+  "name": "inserir email com \"automacao_teste@teste.com.br\"",
   "matchedColumns": [
     1
   ],
@@ -106,7 +113,15 @@ formatter.step({
 });
 formatter.step({
   "line": 9,
-  "name": "palavra inserida com sucesso",
+  "name": "inserir senha com \"1234\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "E "
+});
+formatter.step({
+  "line": 10,
+  "name": "sistema apresenta \"\u003cBem vindo, teste!\u003e\"",
   "keyword": "Entao "
 });
 formatter.match({
@@ -119,32 +134,51 @@ formatter.match({
   "location": "Steps.que_esteja_no_site_seu_barriga(String)"
 });
 formatter.result({
-  "duration": 1075606544,
+  "duration": 3429127354,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "teste",
-      "offset": 9
+      "val": "automacao_teste@teste.com.br",
+      "offset": 19
     }
   ],
-  "location": "Steps.inserir_palavra(String)"
+  "location": "Steps.inserir_email_com(String)"
 });
 formatter.result({
-  "duration": 190402493,
+  "duration": 257203698,
   "status": "passed"
 });
 formatter.match({
-  "location": "Steps.palavra_inserida_com_sucesso()"
+  "arguments": [
+    {
+      "val": "1234",
+      "offset": 19
+    }
+  ],
+  "location": "Steps.inserir_senha_com(String)"
 });
 formatter.result({
-  "duration": 19042,
+  "duration": 789071627,
   "status": "passed"
 });
-formatter.after({
-  "duration": 2000737320,
-  "error_message": "java.lang.NullPointerException\r\n\tat atu.testrecorder.ATUTestRecorder.stop(ATUTestRecorder.java:441)\r\n\tat steps.Hooks.tearDown(Hooks.java:33)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat com.microsoft.java.test.runner.junit4.JUnit4TestReference.run(JUnit4TestReference.java:50)\r\n\tat com.microsoft.java.test.runner.junit4.CustomizedJUnit4CoreRunner.run(CustomizedJUnit4CoreRunner.java:45)\r\n\tat com.microsoft.java.test.runner.junit4.JUnit4Launcher.execute(JUnit4Launcher.java:30)\r\n\tat com.microsoft.java.test.runner.Launcher.main(Launcher.java:56)\r\n",
+formatter.match({
+  "arguments": [
+    {
+      "val": "\u003cBem vindo, teste!\u003e",
+      "offset": 19
+    }
+  ],
+  "location": "Steps.sistema_apresenta(String)"
+});
+formatter.result({
+  "duration": 49595918,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[\u003cBem vindo, teste!\u003e]\u003e but was:\u003c[Bem vindo, teste!]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.Screen.mensagemBemVindo(Screen.java:38)\r\n\tat steps.Steps.sistema_apresenta(Steps.java:32)\r\n\tat ✽.Entao sistema apresenta \"\u003cBem vindo, teste!\u003e\"(teste.feature:10)\r\n",
   "status": "failed"
+});
+formatter.after({
+  "duration": 45135,
+  "status": "passed"
 });
 });

@@ -14,7 +14,7 @@ import support.BaseSteps;
                 "pretty",
                 "html:target/cucumber-reports"}, 
 		glue = "steps", 
-		tags = {"@Web"}, 
+		tags = {"@testeWeb"}, 
 		monochrome = true, 
 		dryRun = false, 
 		strict = false)

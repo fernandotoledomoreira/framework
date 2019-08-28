@@ -2,12 +2,13 @@
 #Author: Fernando Toledo Moreira
 Funcionalidade: teste
 
-@Web
-  Esquema do Cenario: teste
+@testeWeb
+  Esquema do Cenario: teste login
     Dado que esteja no site seu barriga "<Link>"
-    Quando inserir "<palavra>"
-    Entao palavra inserida com sucesso
+    Quando inserir email com "<email>"
+    E inserir senha com "<senha>"
+    Entao sistema apresenta "<Bem vindo, teste!>"
     
     Exemplos: 
-   	| Link 													       | palavra | 
-   	| https://seubarriga.wcaquino.me/login | teste   |
+   	| Link 													       | email                        | senha |
+   	| https://seubarriga.wcaquino.me/login | automacao_teste@teste.com.br | 1234  |
