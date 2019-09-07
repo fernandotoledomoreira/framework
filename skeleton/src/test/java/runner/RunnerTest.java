@@ -17,7 +17,7 @@ import support.BaseSteps;
 		tags = {"@testeWeb"}, 
 		monochrome = true, 
 		dryRun = false, 
-		strict = false)
+		strict = true)
 public class RunnerTest extends BaseSteps {
 	
 	@AfterClass
