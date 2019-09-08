@@ -3,6 +3,7 @@ package support;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -19,12 +20,15 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
 
 public class DriverQA {
@@ -51,9 +55,9 @@ public class DriverQA {
 				driver.manage().window().maximize();
 				break;
 			case "chrome":
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\fernando.moreira\\Documents\\webdriver\\chromedriver.exe");
-				driver = new ChromeDriver();
-				driver.manage().window().maximize();
+				 System.setProperty("webdriver.chrome.driver", "/Users/fernandotoledo/Downloads/chromedriver");
+				 driver = new ChromeDriver();
+				 driver.manage().window().maximize();
 				break;
 			case "ie":
 				System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");

@@ -9,7 +9,7 @@ import support.BaseSteps;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features", 
+		features = "src/test/resources/features/", 
 		plugin = {"json:target/reports/CucumberReport.json",
                 "pretty",
                 "html:target/cucumber-reports"}, 

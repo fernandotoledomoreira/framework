@@ -17,47 +17,42 @@ public class Screen extends DriverQA {
 	 * ---------------------------------mapeamento-----------------------
 	 */
 
-
-	@FindBy (id = "email")
+	@FindBy(id = "email")
 	private WebElement campoEmail;
 
-	@FindBy (id = "senha")
+	@FindBy(id = "senha")
 	private WebElement campoSenha;
-	
-	@FindBy (xpath = "//form[@action='/logar']//button[@type='submit']")
+
+	@FindBy(xpath = "//form[@action='/logar']//button[@type='submit']")
 	private WebElement botaoEntrar;
 
 	/**
 	 * ---------------------------------metodos---------------------------
 	 */
 
-
 	public void AbrirPagina(String Url) {
 		driver.openURL(Url);
 	}
 
-	public void preencherCampoEmail (String email) {
+	public void preencherCampoEmail(String email) {
 		campoEmail.sendKeys(email);
 	}
 
-
-	public void preencherCampoSenha (String senha) {
+	public void preencherCampoSenha(String senha) {
 		campoSenha.sendKeys(senha);
 	}
 
-	public void clicarBotaoEntrar () {
+	public void clicarBotaoEntrar() {
 		botaoEntrar.click();
 	}
 
-	public void mensagemBemVindo () throws Exception {
+	public void mensagemBemVindo() throws Exception {
 		try {
 			driver.findElem("//div[@role='alert']", "xpath");
 		} catch (Exception e) {
 			throw new Exception();
 		}
-		
-		
-		
+
 	}
 
 }

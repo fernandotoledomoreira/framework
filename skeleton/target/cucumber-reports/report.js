@@ -36,11 +36,6 @@ formatter.step({
   "keyword": "Dado "
 });
 formatter.step({
-  "line": 8,
-  "name": "inserir email com \"\u003cemail\u003e\"",
-  "keyword": "Quando "
-});
-formatter.step({
   "line": 9,
   "name": "inserir senha com \"\u003csenha\u003e\"",
   "keyword": "E "
@@ -78,7 +73,7 @@ formatter.examples({
   "keyword": "Exemplos"
 });
 formatter.before({
-  "duration": 9351988530,
+  "duration": 2319784536,
   "status": "passed"
 });
 formatter.scenario({
@@ -104,14 +99,6 @@ formatter.step({
   "keyword": "Dado "
 });
 formatter.step({
-  "line": 8,
-  "name": "inserir email com \"automacao_teste@teste.com.br\"",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Quando "
-});
-formatter.step({
   "line": 9,
   "name": "inserir senha com \"1234\"",
   "matchedColumns": [
@@ -134,20 +121,7 @@ formatter.match({
   "location": "Steps.que_esteja_no_site_seu_barriga(String)"
 });
 formatter.result({
-  "duration": 3429127354,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "automacao_teste@teste.com.br",
-      "offset": 19
-    }
-  ],
-  "location": "Steps.inserir_email_com(String)"
-});
-formatter.result({
-  "duration": 257203698,
+  "duration": 2146283723,
   "status": "passed"
 });
 formatter.match({
@@ -160,8 +134,9 @@ formatter.match({
   "location": "Steps.inserir_senha_com(String)"
 });
 formatter.result({
-  "duration": 789071627,
-  "status": "passed"
+  "duration": 1302162,
+  "error_message": "java.lang.NullPointerException\n\tat pages.Screen.preencherCampoSenha(Screen.java:42)\n\tat steps.Steps.inserir_senha_com(Steps.java:27)\n\tat ✽.E inserir senha com \"1234\"(teste.feature:9)\n",
+  "status": "failed"
 });
 formatter.match({
   "arguments": [
@@ -173,12 +148,10 @@ formatter.match({
   "location": "Steps.sistema_apresenta(String)"
 });
 formatter.result({
-  "duration": 49595918,
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c[\u003cBem vindo, teste!\u003e]\u003e but was:\u003c[Bem vindo, teste!]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.Screen.mensagemBemVindo(Screen.java:38)\r\n\tat steps.Steps.sistema_apresenta(Steps.java:32)\r\n\tat ✽.Entao sistema apresenta \"\u003cBem vindo, teste!\u003e\"(teste.feature:10)\r\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 45135,
+  "duration": 210526,
   "status": "passed"
 });
 });

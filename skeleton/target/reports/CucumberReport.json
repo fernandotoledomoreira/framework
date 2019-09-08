@@ -16,7 +16,7 @@
         "before": [
           {
             "result": {
-              "duration": 9351988530,
+              "duration": 2319784536,
               "status": "passed"
             },
             "match": {
@@ -31,7 +31,7 @@
         "after": [
           {
             "result": {
-              "duration": 45135,
+              "duration": 210526,
               "status": "passed"
             },
             "match": {
@@ -44,7 +44,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3429127354,
+              "duration": 2146283723,
               "status": "passed"
             },
             "line": 7,
@@ -65,29 +65,9 @@
           },
           {
             "result": {
-              "duration": 257203698,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "inserir email com \"automacao_teste@teste.com.br\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "automacao_teste@teste.com.br",
-                  "offset": 19
-                }
-              ],
-              "location": "Steps.inserir_email_com(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 789071627,
-              "status": "passed"
+              "duration": 1302162,
+              "error_message": "java.lang.NullPointerException\n\tat pages.Screen.preencherCampoSenha(Screen.java:42)\n\tat steps.Steps.inserir_senha_com(Steps.java:27)\n\tat ✽.E inserir senha com \"1234\"(teste.feature:9)\n",
+              "status": "failed"
             },
             "line": 9,
             "name": "inserir senha com \"1234\"",
@@ -107,9 +87,7 @@
           },
           {
             "result": {
-              "duration": 49595918,
-              "error_message": "org.junit.ComparisonFailure: expected:\u003c[\u003cBem vindo, teste!\u003e]\u003e but was:\u003c[Bem vindo, teste!]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.Screen.mensagemBemVindo(Screen.java:38)\r\n\tat steps.Steps.sistema_apresenta(Steps.java:32)\r\n\tat ✽.Entao sistema apresenta \"\u003cBem vindo, teste!\u003e\"(teste.feature:10)\r\n",
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "sistema apresenta \"\u003cBem vindo, teste!\u003e\"",
